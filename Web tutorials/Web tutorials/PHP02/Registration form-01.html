@@ -1,0 +1,111 @@
+
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Registration form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      .registration-form {
+        border: 1px solid #ccc;
+        padding: 20px;
+        max-width: 300px;
+      }
+
+      .form-row {
+        margin-bottom: 10px;
+      }
+
+      .form-row label {
+        display: inline-block;
+        width: 120px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="registration-form">
+      <h2>Registration Form</h2>
+      <form action="http://127.0.0.1:5500/process_form.php" method="post">
+        <div class="form-row">
+          <label>First Name:</label>
+          <input type="text" name="first_name" required="">
+        </div>
+        <div class="form-row">
+          <label>Last Name:</label>
+          <input type="text" name="last_name" required="">
+        </div>
+        <div class="form-row">
+          <label>Username:</label>
+          <input type="text" name="username" required="">
+        </div>
+        <div class="form-row">
+          <label>Password:</label>
+          <input type="password" name="password" required="">
+        </div>
+        <div class="form-row">
+          <label>Gender:</label>
+          <input type="radio" name="gender" value="Male" required=""> Male
+          <input type="radio" name="gender" value="Female" required=""> Female
+        </div>
+        <div class="form-row">
+          <label>Academic Year:</label>
+          <select name="academic_year" required="">
+            <option value="01 Year">01 Year</option>
+            <option value="02 Years">02 Years</option>
+            <option value="03 Years">03 Years</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>Phone No:</label>
+          <input type="text" name="phone_no" required="">
+        </div>
+        <div class="form-row">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+
+</body></html>

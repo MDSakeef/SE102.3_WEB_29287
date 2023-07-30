@@ -1,0 +1,131 @@
+
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>html-details</title>
+  </head>
+  <body>
+    <ul>
+      <li>Car</li>
+      <li>Van</li>
+      <li>Bus</li>
+    </ul>
+      
+    <ol type="i">
+      <li>Apple</li>
+      <li>Orange</li>
+      <li>Grape</li>
+      <li>Banana</li>
+    </ol>
+      
+
+    <dl>
+      <dt>Apple</dt>
+      <dd>A fruit</dd>
+      <dt>Cabbage</dt>
+      <dd>A vegetable</dd>
+    </dl>
+      
+
+    <ol type="I" start="12">
+      <li>Twelve</li>
+      <li>Thirteen</li>
+      <li>Fourteen</li>
+      <li>Fifteen</li>
+    </ol>
+      
+      
+ 
+    <ol type="A" start="C">
+      <li>Tea</li>
+      <li>Milk</li>
+      <li>Coffee</li>
+    </ol>
+
+          <ol type="1" start="5">
+      <li>Five</li>
+      <li>Four</li>
+      <li>Three</li>
+    </ol>
+    
+      
+      <ol type="1">
+         <b> <li>Group A</li></b>
+      <ol type="i">
+          <li>Germany</li>
+          <li>France</li>
+          <li>Spain</li>
+          </ol>
+       <b><li>Group B</li></b>
+      <ol type="i">
+          <li>Brazil</li>
+          <li>Argentina</li>
+          <li>Portugal</li>
+          </ol>
+       <b><li>Group C</li></b>
+      <ol type="i">
+          <li>Italy</li>
+          <li>Netherland</li>
+          <li>England</li>
+          </ol></ol>
+      
+      <ol type="1">
+      <li>Cricket</li>
+      <ol type="A">
+          <li>T20</li>
+          <li>ODI</li>
+          <li>Test</li>
+          </ol>
+    <li>Football</li>
+    <li>Rugby</li>
+    <li>Athletics</li>
+          <ol type="i">
+          <li>Running events</li>
+              <ol type="a">
+                  <li>100m</li>
+                    <li>200m</li>
+                    <li>400m</li></ol>
+          <li>Javelin Throw</li>
+          </ol></ol>
+      
+       
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

@@ -1,0 +1,137 @@
+
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Car information Form</title>
+    <style>
+      th,
+      td {
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h1>Car Registration</h1>
+      <form>
+        <table>
+          <tbody><tr>
+            <td><label for="ownerName">Owner Name</label></td>
+            <td>
+              <input type="text" id="ownerName" name="ownerName" placeholder="Owner Name" required="">
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="Email">Email</label></td>
+            <td>
+              <input type="email" id="email" name="email" placeholder="Email" required="">
+            </td>
+          </tr>
+          <tr>
+            <td><label for="phoneNumber">Phone Number</label></td>
+            <td>
+              <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" required="">
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="country">Country</label></td>
+            <td>
+              <select id="country" name="country" required="">
+                <option value="Sri Lanka">Sri Lanka</option>
+                <option value="CANADA">CANADA</option>
+                <option value="INDIA">INDIA</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="carModel">CarModel</label></td>
+            <td><input type="text" id="carModel" name="carModel" required=""></td>
+          </tr>
+
+          <tr>
+            <td><label for="manufactureYear">Manufacture Year</label></td>
+            <td>
+              <select id="manufactureYear" name="manufactureYear" required="">
+                <option value="" disabled="" selected="">Select year</option>
+                <option value="2023">2021</option>
+                <option value="2022">2020</option>
+                <option value="2021">2019</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label>Transmission</label></td>
+            <td>
+              <input type="radio" id="manual" name="transmission" value="Manual" required=""><label for="manual">Manual</label>
+              <input type="radio" id="auto" name="transmission" value="Auto" required=""><label for="auto">Auto</label><br>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <label for="other">Other</label>
+            </td>
+            <td>
+              <textarea id="other" name="other" rows="4" cols="50"></textarea>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <input type="checkbox" value="text" required="">
+              <label>I agree to the terms and conditions</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="submit"> 
+              <input type="reset">
+            </td>
+          </tr>
+        </tbody></table>
+      </form>
+    </center>
+    <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+    
+</body></html>
